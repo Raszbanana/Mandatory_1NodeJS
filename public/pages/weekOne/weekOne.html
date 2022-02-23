@@ -1,12 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="./weekOne.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Week1</title>
   </head>
+
   <body>
-      
+    <section class="hero is-medium is-link">
+      <div class="hero-body">
+        <div class="columns">
+          <div class="column is-half api-column api-column-left">
+            <h1 class="column-title">Designing a REST API</h1>
+            <img src="./images/apiDesign.PNG" class="api-pic" alt="ApiData" />
+            <br />
+            <br />
+            <br />
+            <p>
+              One of the first task's was to design a REST API. Most importantly
+              doing so in a correct manner, following the right conventions. We
+              decided to have memes as our entity. Above is how i went about
+              designing the API
+            </p>
+            <p>The important takes i gathered was:</p>
+            <br />
+            <li class="api-points">
+              We can identify the “memes” collection resource using the URI
+              “/memes“. We can identify a single “meme” resource using the URI
+              “/memes/{memeId}“. Also referred to as the pathvariable
+            </li>
+            <br />
+            <li class="api-points">
+              If the searched ressource is a multiple worded query, utilize "-"
+              to connect the words into a single word.
+              <br />
+              A good example would be: meme manager > /meme-managers >
+              /meme-managers/{meme-managerId}
+            </li>
+          </div>
+          <div class="column is-half api-column">
+            <h1 class="column-title">Basic terminal commands</h1>
+            <li>
+              <code>$ cd "insertDirectory"</code>
+              <br />
+              <br />
+              <p>
+                cd into a directory, which is within the direct scope of your
+                current directory
+              </p>
+            </li>
+            <br />
+            <li>
+              <code>$ cd ..</code>
+              <br />
+              <br />
+              <p>Move up on directory</p>
+            </li>
+            <br />
+            <li>
+              <code>$ ls OR dir </code>
+              <br />
+              <br />
+              <p>View the files inside your current scope</p>
+            </li>
+            <br />
+            <li>
+              <code>$ mkdir "nameOfDirectory"</code>
+              <br />
+              <br />
+              <p>Create a new directory inside your current one</p>
+            </li>
+          </div>
+        </div>
+        <div class="columns">
+          <div
+            class="column is-half api-column api-column-left"
+            style="margin-top: 50px"
+          >
+            <h1 class="column-title">Variables & Identifiers</h1>
+          </div>
+          <div class="column is-half api-column" style="margin-top: 50px">
+            <h1 class="column-title">Node commands</h1>
+            <li>
+              <code>$ node</code>
+              <br />
+              <br />
+              <p>
+                A good checker to see if Node has been installed, while also showing the version
+              </p>
+            </li>
+            <br />
+            <li>
+              <code>$ npm install</code>
+              <br />
+              <br />
+              <p>Will install all the dependencies located in your package.json</p>
+            </li>
+            <br />
+            <li>
+              <code>$ npm uninstall "insertPackage"</code>
+              <br />
+              <br />
+              <p>Should you ever encounter the need to uninstall a dependency</p>
+            </li>
+            <br />
+            <li>
+              <code>$ node "yourApp.js"</code>
+              <br />
+              <br />
+              <p>To run your application</p>
+            </li>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
