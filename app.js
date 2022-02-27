@@ -5,6 +5,8 @@ const app = express();
 app.use(express.json());
 
 app.use(express.static(__dirname + "/public/pages"));
+app.use(express.static(__dirname + "/public/components"));
+
 
 const nav = fs
   .readFileSync(__dirname + "/public/components/nav/nav.html")
