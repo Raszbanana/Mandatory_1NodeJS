@@ -7,8 +7,11 @@
 }
 
 .api-column {
-    border-radius: 15px;
-    background-color:rgb(100 100 100) ;
+    background-color:rgb(21 30 46);
+    border-style: groove;
+    border-color: #e4ef42;
+    border-width: thick;
+    border-radius: 30px;
 }
 
 .api-column-left {
@@ -20,4 +23,8 @@
     font-size: xxx-large;
     text-align: center;
     margin-bottom: 10px;
+}
+
+.make-emoji{
+    font-family: emoji;
 }

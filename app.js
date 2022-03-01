@@ -36,29 +36,35 @@ const weekFour = fs
   .readFileSync(__dirname + "/public/pages/weekFour/weekFour.html")
   .toString();
 
-const homePage = nav + home + footer;
-const weekOnePage = nav + weekOne + footer;
-const weekTwoPage = nav + weekTwo + footer;
-const weekThreePage = nav + weekThree + footer;
-const weekFourPage = nav + weekFour + footer;
+let homePage = nav + home + footer;
+let weekOnePage = nav + weekOne + footer;
+let weekTwoPage = nav + weekTwo + footer;
+let weekThreePage = nav + weekThree + footer;
+let weekFourPage = nav + weekFour + footer;
 
 app.get("/", (req, res) => {
+  homePage = nav.replace('%%ACTIVEHOME%%', 'active') + home + footer;
+  
   res.send(homePage);
 });
 
 app.get("/weekOne", (req, res) => {
+  weekOnePage = nav.replace('%%ACTIVEONE%%', 'active') + weekOne + footer;
   res.send(weekOnePage);
 });
 
 app.get("/weekTwo", (req, res) => {
+  weekTwoPage = nav.replace('%%ACTIVETWO%%', 'active') + weekTwo + footer;
   res.send(weekTwoPage);
 });
 
 app.get("/weekThree", (req, res) => {
+  weekThreePage = nav.replace('%%ACTIVETHREE%%', 'active') + weekThree + footer;
   res.send(weekThreePage);
 });
 
 app.get("/weekFour", (req, res) => {
+  weekFourPage = nav.replace('%%ACTIVEFOUR%%', 'active') + weekFour + footer;
   res.send(weekFourPage);
 });
 

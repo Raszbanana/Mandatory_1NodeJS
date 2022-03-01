@@ -1,4 +1,12 @@
-.activeLink{
-    color: red;
+.navers{
+    color: hsl(199, 59%, 44%);
+    border-radius: 4px;
   }
+
+.active {
+  color: #855efd;
+  background-color:white;
+}
+
+
   

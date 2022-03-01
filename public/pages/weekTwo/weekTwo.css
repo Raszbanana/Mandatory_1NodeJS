@@ -1,0 +1,15 @@
+.column-title {
+    font-size: xxx-large;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.api-column-left {
+    margin-right: 20px;
+    margin-left: -10px;
+}
+
+.api-column {
+    border-radius: 15px;
+    background-color:#000000;
+}

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="./weekTwo.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,12 +9,26 @@
   </head>
   <body>
     <section class="hero is-medium is-link">
-      <div class="hero-body" style="background-color: #131314">
+      <div class="hero-body" style="background-color: #485fc7">
         <div class="columns">
           <div class="column is-half api-column api-column-left">
             <h1 class="column-title" style="text-shadow: 2px 2px #000000">
-              Callback Functions
+              About functions
             </h1>
+            <p>
+              To start off, there is the fact that a function can be named, or
+              anonymous.
+            </p>
+            <br>
+            <code>function AddArrowFunction(x,y) { return x+y } // Named</code>
+            <br>
+            <br>
+            <code>const addArrowFunction = (x,y) => x+y; // Anonymous </code>
+            <br>
+            <br>
+            <p>Notably is that assigning a variable to a function, still makes the function anonymous</p>
+            <br>
+            <p>Another important thing to note is callback and currying. </p>
           </div>
           <div class="column is-half api-column">
             <h1 class="column-title" style="text-shadow: 2px 2px #000000">
@@ -32,7 +47,7 @@
           </div>
           <div class="column is-half api-column" style="margin-top: 50px">
             <h1 class="column-title" style="text-shadow: 2px 2px #000000">
-              Serving a with Express
+              Serving with Express
             </h1>
           </div>
         </div>
