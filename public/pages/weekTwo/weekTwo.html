@@ -1,57 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="stylesheet" href="./weekTwo.css" />
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WeekTwo</title>
-  </head>
-  <body>
-    <section class="hero is-medium is-link">
-      <div class="hero-body" style="background-color: #485fc7">
-        <div class="columns">
-          <div class="column is-half api-column api-column-left">
-            <h1 class="column-title" style="text-shadow: 2px 2px #000000">
-              About functions
-            </h1>
-            <p>
-              To start off, there is the fact that a function can be named, or
-              anonymous.
-            </p>
-            <br>
-            <code>function AddArrowFunction(x,y) { return x+y } // Named</code>
-            <br>
-            <br>
-            <code>const addArrowFunction = (x,y) => x+y; // Anonymous </code>
-            <br>
-            <br>
-            <p>Notably is that assigning a variable to a function, still makes the function anonymous</p>
-            <br>
-            <p>Another important thing to note is callback and currying. </p>
-          </div>
-          <div class="column is-half api-column">
-            <h1 class="column-title" style="text-shadow: 2px 2px #000000">
-              Clean Code Conventions
-            </h1>
-          </div>
+
+<head>
+  <link rel="stylesheet" href="./weekTwo.css" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Week1</title>
+</head>
+
+<body>
+  <section class="hero is-medium is-link">
+    <div class="hero-body" style="background-color: #000000 ">
+      <div class="columns">
+        <div class="column is-half api-column api-column-left">
+          <h1 class="column-title" style="text-shadow: 2px 2px #000000">
+            About functions
+          </h1>
+          <p>
+            Important function types are:
+          </p>
+          <br>
+          <code class="codeDesign">function AddArrowFunction(x,y) { return x+y } // Named</code>
+          <br>
+          <br>
+          <code class="codeDesign">const addArrowFunction = function(x,y) { x+y; } // Anonymous </code>
+          <br>
+          <br>
+          <code class="codeDesign">const addArrowFunction = (x,y) => { x+y;}  // Arrow or Lambda </code>
+          <br>
+          <br>
+          <p></p> Assigning a variable to a function, still makes the function anonymous</p>
+          <br>
+          <h2 class="column-subtitle">Currying & Callbacks</h2>
+          <p>
+            Are two completely different technologies.
+            Callbacks are essentially a synonym for "passing a function to a function"
+            (i.e. higher-order function that consumes a function). In essense,
+            currying is simply the act of returning a usable function in
+            JavaScript instead of a primitive value like a Boolean or a string: </p>
+          <br>
+          <code class="codeDesign">function functionalThing(noun) {
+                return phrase => console.log(`I am ${noun}, and ${phrase}.`);}</code>
+          <br>
+          <br>
         </div>
-        <div class="columns">
-          <div
-            class="column is-half api-column api-column-left"
-            style="margin-top: 50px"
-          >
-            <h1 class="column-title" style="text-shadow: 2px 2px #000000">
-              Package.json
-            </h1>
-          </div>
-          <div class="column is-half api-column" style="margin-top: 50px">
-            <h1 class="column-title" style="text-shadow: 2px 2px #000000">
-              Serving with Express
-            </h1>
-          </div>
+        <div class="column is-half api-column">
+          <h1 class="column-title" style="text-shadow: 2px 2px #000000">
+            Code Conventions, why?
+          </h1>
+          <p>Code conventions improve the readability of the software, allowing engineers to understand new code more
+            quickly and thoroughly. If you ship your source code as a product, you need to make sure it is as well
+            packaged and clean as any other product you create.</p>
+          <p>Make sure you code always follows in line with the general convention of whatever you are programming.
+            The general rule of thumbs for programming in general is:
+          </p>
+          <br>
+          <p style="font-style: italic; font-weight: 200;">"lowerCamelCase when naming constants, variables, and
+            functions. Use UpperCamelCase (capital first
+            letter
+            as well) when naming classes. This will help you to easily distinguish between plain variables/functions,
+            and classes that require instantiation. Use descriptive names, but try to keep them short."</p>
+          <br>
+          <p>Conventions can basically range from file organization, indentation, comments, declarations, statements,
+            white space, naming conventions, programming practices, programming principles, programming rules of thumb
+            to
+            architectural best practices, etc</p>
         </div>
       </div>
-    </section>
-  </body>
+      <div class="columns">
+        <div class="column is-half api-column api-column-left" style="margin-top: 50px">
+          <h1 class="column-title" style="text-shadow: 2px 2px #000000">
+            Package.Json
+          </h1>
+          <p>The package.json file is a core element in the Node.js ecosystem and is basic for understanding and working
+            with Node.js, NPM, modern JavaScript and JavaScript frameworks and libraries. The package.json is used as a
+            manifest about applications, modules and packages. It's a tool to make modular and efficient applications.
+          </p>
+          <br>
+          <p>To keep things precise, it is in charge of keeping track of dependencies, scripts and configurations. If
+            someone was to clone your project, he should be able to run NPM install, then node will look for the
+            package.json file and know what to install, even to the extend of the version of said dependencies</p>
+            <br>
+            <div style="text-align: center;">
+            <img class="package-img"src="./images/tilMandatory.JPG" class="pckJson" alt="packageJsonData" />
+          </div>
+        </div>
+        <div class="column is-half api-column" style="margin-top: 50px">
+          <h1 class="column-title" style="text-shadow: 2px 2px #000000">
+            NodeJS with Express
+          </h1>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
 </html>

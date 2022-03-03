@@ -1,12 +1,11 @@
-.navers{
-    color: hsl(199, 59%, 44%);
-    border-radius: 4px;
-  }
+.navers {
+  color: #ffeb00;
+  border-radius: 4px;
+}
 
 .active {
-  color: #855efd;
-  background-color:white;
+  color: #ffeb00;
+  background-color: rgb(21 30 46);
 }
 
 
-  

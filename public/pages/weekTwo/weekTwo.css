@@ -1,7 +1,20 @@
-.column-title {
-    font-size: xxx-large;
-    text-align: center;
-    margin-bottom: 10px;
+.hero-body {
+    background-image: url("../weekOne/images/testback.JPG")
+}
+.api-pic {
+    border-radius: 15px;
+}
+
+.api-points {
+    font-weight: bold;
+}
+
+.api-column {
+    background-color:rgb(21 30 46);
+    border-style: groove;
+    border-color: #ffffff;
+    border-width: thick;
+    border-radius: 30px;
 }
 
 .api-column-left {
@@ -9,7 +22,28 @@
     margin-left: -10px;
 }
 
-.api-column {
-    border-radius: 15px;
-    background-color:#000000;
+.column-title {
+    font-size: xxx-large;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #ffeb00;
+}
+
+.column-subtitle {
+    font-size: 150%;
+}
+
+.make-emoji{
+    font-family: emoji;
+}
+
+.codeDesign{
+    background-color: #000000;
+    color: #56ff00;
+}
+
+.package-img {
+    border-style: double;
+    border-color: #ffeb00;
+    border-radius: 24px;
 }

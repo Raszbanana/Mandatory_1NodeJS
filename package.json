@@ -1,5 +1,5 @@
 {
-  "name": "mandatory_1nodejs",
+  "name": "mandatory_1nodejs", 
   "version": "1.0.0",
   "description": "Mandatory assignment 1 for NodeJS Elective",
   "main": "app.js",
