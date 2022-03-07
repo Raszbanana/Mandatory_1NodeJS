@@ -1,12 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WeekFour</title>
+    <link rel="stylesheet" href="./weekFour.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week4</title>
 </head>
+
 <body>
-    
+    <section class="hero is-medium is-link">
+        <div class="hero-body" style="background-color: #000000">
+            <div class="columns">
+                <div class="column is-half api-column api-column-left">
+                    <h1 class="column-title" style="text-shadow: 2px 2px #000000">
+                        Static Assets
+                    </h1>
+                    <p> When it comes to security in general, you don't want the user to have the ability to access
+                        every
+                        single source file of your project. But there might still be extra files you want the user to be
+                        able to download or view. Basically the user will be able to access a for example a certain
+                        folder
+                        using https. Typically you want to include images or styles to the static assets. Using express
+                        this
+                        can be done in the following way:</p>
+                    <br>
+                    <code class="codeDesign">$ app.use(express.static(__dirname + "/public/pages"));</code>
+                    <br>
+                    <br>
+                    <p>Here i am stating that the folder "pages" in my root directory, followed by the path for pages,
+                        should be
+                        added as a static asset. Now i can load my styles to my html document, together with any images
+                        or other content types that are part of my page.</p>
+                </div>
+                <div class="column is-half api-column">
+                    <h1 class="column-title" style="text-shadow: 2px 2px #000000">
+                        SSR
+                    </h1>
+                    <p>SSR stands for Server Side Rendering. What this means is that inside of the user's client having
+                        to load everything when making a request, everything is preloaded on the server side. This is
+                        handy for making sure everything is loaded correctly before displaying it to the user, but also
+                        because of webcrawlers scouring the internet, these are the small bots that makes it possible
+                        for valid search results to show up on for example google and adding server side rendering makes
+                        your website more visible because of this. Implementing server side rendering using express is
+                        not that complicated. First you want to import filesync: </p>
+                    <br>
+                    <code class="codeDesign">$ const fs = require("fs");</code>
+                    <br>
+                    <br>
+                    <p>Once filesync is imported you can now read files from your project and convert them to a string
+                    </p>
+                    <br>
+                    <code class="codeDesign">$ const nav = fs
+                            .readFileSync(__dirname + "/public/components/nav/nav.html")
+                            .toString(); </code>
+                    <br>
+                    <br>
+                    <p>Here i am reading my navbar file and converting it to string, i am then able to combine it with
+                        other page components:</p>
+                    <br>
+                    <code class="codeDesign">$ let homePage = nav + home + footer; </code>
+                    <br>
+                    <br>
+                    <p>Now i can return my combined homepage upon a request for the homepage:</p>
+                    <br>
+                    <code class="codeDesign">$ app.get("/", (req, res) => {
+                            
+                            res.send(homePage);
+                          });
+                    </code>
+                    <br>
+                    <br>
+                    <p>And that's it, now you have pre-rendered everything on the server side before the user requests
+                        the page</p>
+                </div>
+            </div>
+    </section>
 </body>
+
 </html>

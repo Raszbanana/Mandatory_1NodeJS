@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Week1</title>
+    <title>Week3</title>
   </head>
 
   <body>
@@ -16,17 +16,83 @@
             <h1 class="column-title" style="text-shadow: 2px 2px #000000">
               Nodemon
             </h1>
+            <p>
+              What is Nodemon? As you might know, making changes in your project
+              requires a restart before said changes will be visible. Manually
+              this would mean having to type "node yourApp.js" repeatedly each
+              time. This would be very frustrating when you are actively
+              developing small changes in your project. However luckily there is
+              a tool called Nodemon, which will actively listen for any changes
+              in your project and restart your app everytime you make a change.
+              To install Nodemon we use the npm installer:
+            </p>
+            <br />
+            <code class="codeDesign">$ npm install -g nodemon </code>
+            <br />
+            <br />
+            <p>
+              Notice that we also type in "-g" this means that we are installing
+              nodemon globally so that we wont have to install it for every new
+              project we create. Once Nodemon is installed you simply run your
+              app using Nodemon instead:
+            </p>
+            <br />
+            <code class="codeDesign">$ nodemon yourApp.js </code>
+            <br />
+            <br />
+            <p>
+              If you want nodemon to not just restart on your app when changes
+              are made to your app file, but also changes to html, css, files
+              etc you then need to tell it to do so by creating a nodemon.json
+              file in your root folder and type in something like this:
+            </p>
+            <br />
+            <code class="codeDesign">{ "ext": "html, css" }</code>
+            <br />
+            <br />
+            <p>
+              Nodemon will now actively listen for changes for the type of files you
+              specify
+            </p>
           </div>
           <div class="column is-half api-column">
             <h1 class="column-title" style="text-shadow: 2px 2px #000000">
               Sending Data
             </h1>
+            <p>
+              Assuming that you have already setup a simple express server and
+              can receive a get request through the web. Now you want to also be
+              able to send data in a request. Using express this is very
+              simplified. An example from a class excercise with beers:
+            </p>
+            <br />
+            <code class="codeDesign"
+              >$ app.post("/beers", (req, res) => {
+            </code>
+            <br />
+            <code class="codeDesign">1. const beerToCreate = req.body; </code>
+            <br />
+            <code class="codeDesign">2. beerToCreate.id = beerIdCounter++; </code>
+            <br />
+            <code class="codeDesign">3. beers.push(beerToCreate);</code>
+            <br />
+            <code class="codeDesign">4. res.send({ data: beerToCreate }); </code>
+            <br />
+            <br />
+            <p>
+              To explain in detail, we are creating a new const which will
+              contain the properties of the request body(1.). We then assign the id
+              to our global beerIdCounter(2.), to make sure that every beer added
+              has a unique identifier. Once this is done we can now add the new
+              beer to our array of beers(3.). We then send back the data of the
+              newly created beer to confirm that it was created and added to our
+              array(4.)
+            </p>
           </div>
         </div>
         <div class="columns">
-          <div class="column is-full api-column" style="margin-top: 50px;     width: 50%;
-          margin-left: 25%;">
-            <h1 class="column-title" style="text-shadow: 2px 2px #000000 ">
+          <div class="column is-full api-column" style="margin-top: 50px">
+            <h1 class="column-title" style="text-shadow: 2px 2px #000000">
               Loops
             </h1>
             <p>
@@ -45,16 +111,47 @@
               If we wanted to increment or decrement every number, we would
               normally just write a for loop like the following:
             </p>
-            <br>
-            <code class="codeDesign">$ for(let number of numbers){ number += 1; }</code>
-            <br>
-            <br>
-            <p>However this can be simplified by using the "forEach" method, which all arrays in javascript has access to:</p>
-            <br>
-            <code class="codeDesign">$ numbers.forEach(number => number++); </code>
-            <br>
-            <br>
-            <p>One thing to note however, is that the "forEach" method does not return anything, it merely executes whatever you tell it to on all the elements inside the array</p>
+            <br />
+            <code class="codeDesign"
+              >$ for(let number of numbers){ number += 1; }</code
+            >
+            <br />
+            <br />
+            <p>
+              However this can be simplified by using the "forEach" method,
+              which all arrays in javascript has access to:
+            </p>
+            <br />
+            <code class="codeDesign"
+              >$ numbers.forEach(number => number++);
+            </code>
+            <br />
+            <br />
+            <p>
+              One thing to note however, is that the "forEach" method does not
+              return anything, it merely executes whatever you tell it to
+              execute on all the elements inside the array. Should you wish to
+              iterate through an array AND return something, you should utilize
+              the "map" function:
+            </p>
+            <br />
+            <code class="codeDesign"
+              >$ numbers.map(number => { number++ return number; });</code
+            >
+            <br />
+            <br />
+            <p>
+              Lastly but also important we have the "filter" function. The
+              filter() function creates a new array with all elements that pass
+              the test implemented by the provided function. What this means is
+              that it will return a new array which are the result of the
+              parameters you set. For example if i wanted the array to only have
+              numbers above 2:
+            </p>
+            <br />
+            <code class="codeDesign"
+              >$ const newNumbers = numbers.filter(number => number < 2);</code
+            >
           </div>
         </div>
       </div>
