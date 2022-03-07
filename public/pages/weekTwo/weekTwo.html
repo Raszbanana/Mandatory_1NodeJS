@@ -21,13 +21,13 @@
             Important function types are:
           </p>
           <br>
-          <code class="codeDesign">function AddArrowFunction(x,y) { return x+y } // Named</code>
+          <code class="codeDesign">$ function AddArrowFunction(x,y) { return x+y } // Named</code>
           <br>
           <br>
-          <code class="codeDesign">const addArrowFunction = function(x,y) { x+y; } // Anonymous </code>
+          <code class="codeDesign">$ const addArrowFunction = function(x,y) { x+y; } // Anonymous </code>
           <br>
           <br>
-          <code class="codeDesign">const addArrowFunction = (x,y) => { x+y;}  // Arrow or Lambda </code>
+          <code class="codeDesign">$ const addArrowFunction = (x,y) => { x+y;}  // Arrow or Lambda </code>
           <br>
           <br>
           <p></p> Assigning a variable to a function, still makes the function anonymous</p>
@@ -40,8 +40,8 @@
             currying is simply the act of returning a usable function in
             JavaScript instead of a primitive value like a Boolean or a string: </p>
           <br>
-          <code class="codeDesign">function functionalThing(noun) {
-                return phrase => console.log(`I am ${noun}, and ${phrase}.`);}</code>
+          <code class="codeDesign">$ function functionalThing(noun) {
+                return phrase => console.log(`I am ${noun}, and ${phrase}.`);} // Currying</code>
           <br>
           <br>
         </div>
@@ -80,16 +80,54 @@
           <br>
           <p>To keep things precise, it is in charge of keeping track of dependencies, scripts and configurations. If
             someone was to clone your project, he should be able to run NPM install, then node will look for the
-            package.json file and know what to install, even to the extend of the version of said dependencies</p>
-            <br>
-            <div style="text-align: center;">
-            <img class="package-img"src="./images/tilMandatory.JPG" class="pckJson" alt="packageJsonData" />
+            package.json file and know what to install, even to the extend of the version of said dependencies. Here is
+            how my package.json file looks for this very project:</p>
+          <br>
+          <div style="text-align: center;">
+            <img class="package-img" src="./images/tilMandatory.JPG" class="pckJson" alt="packageJsonData" />
           </div>
         </div>
         <div class="column is-half api-column" style="margin-top: 50px">
           <h1 class="column-title" style="text-shadow: 2px 2px #000000">
             NodeJS with Express
           </h1>
+          <p>Here is how you setup a simple and easy server instance, using express. Assuming you have already installed
+            NPM you now need to install express:</p>
+          <br>
+          <code class="codeDesign">$ npm install express --save</code>
+          <br></br>
+          <p>Once this is done you can now create your app.js file and type in the following:</p>
+          <br>
+          <code class="codeDesign">$ const express = require("express");</code>
+          <br>
+          <br>
+          <p>This is basically how you import in node, using require instead. We are assigning the const express to the
+            imported contents of the express module</p>
+          <br>
+          <p>Once this is done we need to assign our const "app" to the express() function. This is basically what
+            instantiates a new express application</p>
+          <br>
+          <code class="codeDesign">$ const app = express();</code>
+          <br>
+          <br>
+          <p>Now that we have setup express, we can now start to use the built-in functions to take requests</p>
+          <br>
+          <code class="codeDesign">$ app.get('/', (req, res) => {
+            res.send('Hello World!')
+          })</code>
+          <br>
+          <br>
+          <p>However, since we didn't specify a port yet, we also need to assign that so that we know where to listen for requests</p>
+          <br>
+          <code class="codeDesign">$ app.listen(3000, (req, res) => {
+            console.log("App listening on port 3000");
+          });
+          </code>
+          <br>
+          <br>
+          <p>Now when we navigate to "localhost:3000" We will be returned by a text that says hello world. Like this:</p>
+          <br>
+          <p style="text-align: center">"Hello World!"</p>
         </div>
       </div>
     </div>

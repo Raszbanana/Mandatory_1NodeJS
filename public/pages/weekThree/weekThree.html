@@ -1,42 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WeekThree</title>
-</head>
-<body>
+  <head>
+    <link rel="stylesheet" href="./weekThree.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week1</title>
+  </head>
+
+  <body>
     <section class="hero is-medium is-link">
-        <div class="hero-body" style="background-color: #000000">
-          <div class="columns">
-            <div class="column is-half api-column api-column-left">
-              <h1 class="column-title" style="text-shadow: 2px 2px #000000">
-                Loops
-              </h1>
-            </div>
-            <div class="column is-half api-column">
-              <h1 class="column-title" style="text-shadow: 2px 2px #000000">
-                Nodemon
-              </h1>
-            </div>
+      <div class="hero-body" style="background-color: #000000">
+        <div class="columns">
+          <div class="column is-half api-column api-column-left">
+            <h1 class="column-title" style="text-shadow: 2px 2px #000000">
+              Nodemon
+            </h1>
           </div>
-          <div class="columns">
-            <div
-              class="column is-half api-column api-column-left"
-              style="margin-top: 50px"
-            >
-              <h1 class="column-title" style="text-shadow: 2px 2px #000000">
-                Sending Data
-              </h1>
-            </div>
-            <div class="column is-half api-column" style="margin-top: 50px">
-              <h1 class="column-title" style="text-shadow: 2px 2px #000000">
-                Implmentation of REST API 
-              </h1>
-            </div>
+          <div class="column is-half api-column">
+            <h1 class="column-title" style="text-shadow: 2px 2px #000000">
+              Sending Data
+            </h1>
           </div>
         </div>
-      </section>
-</body>
+        <div class="columns">
+          <div class="column is-full api-column" style="margin-top: 50px;     width: 50%;
+          margin-left: 25%;">
+            <h1 class="column-title" style="text-shadow: 2px 2px #000000 ">
+              Loops
+            </h1>
+            <p>
+              Working with loops in conventional java, we usually would do a
+              typical for loop, which would increment to a set or x value.
+              However this uses several lines of code. In javascript we have
+              built-in function to handle whatever type of operation we might
+              need to perform. For example purposes, lets assume we have an
+              array of numbers:
+            </p>
+            <br />
+            <code class="codeDesign">$ const numbers = [1, 2, 3, 4]; </code>
+            <br />
+            <br />
+            <p>
+              If we wanted to increment or decrement every number, we would
+              normally just write a for loop like the following:
+            </p>
+            <br>
+            <code class="codeDesign">$ for(let number of numbers){ number += 1; }</code>
+            <br>
+            <br>
+            <p>However this can be simplified by using the "forEach" method, which all arrays in javascript has access to:</p>
+            <br>
+            <code class="codeDesign">$ numbers.forEach(number => number++); </code>
+            <br>
+            <br>
+            <p>One thing to note however, is that the "forEach" method does not return anything, it merely executes whatever you tell it to on all the elements inside the array</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
